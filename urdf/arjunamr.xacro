@@ -1,0 +1,221 @@
+<?xml version="1.0" ?>
+<robot name="arjunamr" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find arjunamr_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find arjunamr_description)/urdf/arjunamr.trans" />
+<xacro:include filename="$(find arjunamr_description)/urdf/arjunamr.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.00854526716791335 0.00019359241960205484 0.03046160061738716"/>
+    <mass value="8.512359123178545"/>
+    <inertia ixx="0.024735" ixy="0.000123" ixz="0.00346" iyy="0.074098" iyz="-7.8e-05" izz="0.090773"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="yellow"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.2682718872624186e-07 -4.73999949509446e-07 0.012500000000000011"/>
+    <mass value="0.18692476288859267"/>
+    <inertia ixx="0.000127" ixy="-0.0" ixz="-0.0" iyy="0.000127" iyz="-0.0" izz="0.000234"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.082963 -0.00188 -0.11"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.082963 -0.00188 -0.11"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rightwheel1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.015000000000000027 -1.0408340855860843e-17"/>
+    <mass value="0.21473270525562735"/>
+    <inertia ixx="0.000147" ixy="0.0" ixz="0.0" iyy="0.000263" iyz="-0.0" izz="0.000147"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.125 -0.11 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Rightwheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.125 -0.11 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Rightwheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RightWheel2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 0.015000000000000027 6.938893903907228e-18"/>
+    <mass value="0.21473270525562738"/>
+    <inertia ixx="0.000147" ixy="-0.0" ixz="0.0" iyy="0.000263" iyz="0.0" izz="0.000147"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.125 -0.11 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/RightWheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.125 -0.11 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/RightWheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Leftwheel2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 -0.015 -6.938893903907228e-18"/>
+    <mass value="0.2147327052556273"/>
+    <inertia ixx="0.000147" ixy="0.0" ixz="0.0" iyy="0.000263" iyz="0.0" izz="0.000147"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.125 0.11 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Leftwheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.125 0.11 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Leftwheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Leftwheel1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.7755575615628914e-17 -0.015000000000000083 -1.0408340855860843e-17"/>
+    <mass value="0.21473270525562732"/>
+    <inertia ixx="0.000147" ixy="-0.0" ixz="0.0" iyy="0.000263" iyz="-0.0" izz="0.000147"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.125 0.11 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Leftwheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.125 0.11 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Leftwheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.04086055601459972 -1.3911421002075886e-14 0.03256937405777325"/>
+    <mass value="0.05694653926634257"/>
+    <inertia ixx="3e-05" ixy="0.0" ixz="-1e-06" iyy="1.5e-05" iyz="0.0" izz="1.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.16 -0.0 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.16 -0.0 -0.025"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Rpi_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02324599163491371 -0.013965472519732503 0.005888830680916786"/>
+    <mass value="0.13472167579144534"/>
+    <inertia ixx="8.3e-05" ixy="0.0" ixz="0.0" iyy="4.1e-05" iyz="9e-06" izz="0.000118"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.05"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Rpi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="green"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.05"/>
+    <geometry>
+      <mesh filename="package://arjunamr_description/meshes/Rpi_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Lidar_1" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.082963 0.00188 0.11"/>
+  <parent link="base_link"/>
+  <child link="Lidar_1"/>
+</joint>
+
+<joint name="RW1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.125 0.11 0.025"/>
+  <parent link="base_link"/>
+  <child link="Rightwheel1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="RW2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.125 0.11 0.025"/>
+  <parent link="base_link"/>
+  <child link="RightWheel2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="LW2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.125 -0.11 0.025"/>
+  <parent link="base_link"/>
+  <child link="Leftwheel2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="LW1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.125 -0.11 0.025"/>
+  <parent link="base_link"/>
+  <child link="Leftwheel1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="camera" type="fixed">
+  <origin rpy="0 0 0" xyz="0.16 0.0 0.025"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+<joint name="Rpi" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.05"/>
+  <parent link="base_link"/>
+  <child link="Rpi_1"/>
+</joint>
+
+</robot>
